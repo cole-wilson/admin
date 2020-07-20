@@ -2,7 +2,7 @@ backend:
   name: github
   repo: cole-wilson/cole-wilson.github.io
   branch: master
-  site_domain: eager-saha-ced5f4
+  site_domain: vigorous-ride-96be5f
 
 media_folder: "img"
 
