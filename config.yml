@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: cole-wilson/cole-wilson.github.io
   branch: master
   site_domain: vigorous-ride-96be5f
