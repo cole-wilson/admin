@@ -4,6 +4,9 @@ backend:
 
 media_folder: "img"
 
+display_url: https://colewilson.xyz/
+logo_url: https://colewilson.xyz/apple-touch-icon.png
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
@@ -16,6 +19,17 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
       - {label: "Image", name: "image", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Pages" # Used in the UI
+    folder: "_pages/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Description", name: "desc", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
@@ -32,5 +46,5 @@ collections:
       - {label: "Repo", name: "repo", widget: "string"}
       - {label: "GitHub User", name: "user", widget: "string", default: "cole-wilson"}
       - {label: "Download URL", name: "download", widget: "string"}
-   
       - {label: "Body", name: "body", widget: "markdown"}
+    
