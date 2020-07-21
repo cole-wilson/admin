@@ -7,6 +7,8 @@ media_folder: "img"
 display_url: https://colewilson.xyz/
 logo_url: https://colewilson.xyz/apple-touch-icon.png
 
+publish_mode: editorial_workflow
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
@@ -28,6 +30,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string", default: "{{slug}}"}
       - {label: "Layout", name: "layout", widget: "select", options: ["post", "page", "home", "project", "master", "archive"], default: ["page"]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", required: false, name: "tags", widget: "list"}
