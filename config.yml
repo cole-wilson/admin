@@ -18,7 +18,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
-      - {label: "Image", name: "image", widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
+      - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
@@ -30,7 +30,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "select", options: ["post", "page", "home", "project", "master", "archive"], default: ["page"]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", required: false, name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       
@@ -42,9 +42,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", required: false, name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
-      - {label: "Image", name: "image", widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
+      - {label: "Image", name: "image", widget: "image"}
       - {label: "URL", name: "site", required: false, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
       - {label: "Repo", name: "repo", required: false, widget: "string"}
       - {label: "GitHub User", required: false, name: "user", widget: "string", default: "cole-wilson"}
