@@ -4,7 +4,7 @@ backend:
 
 media_folder: "img"
 
-display_url: https://colewilson.xyz/
+display_url: https://colewilson.xyz
 logo_url: https://colewilson.xyz/apple-touch-icon.png
 
 publish_mode: editorial_workflow
