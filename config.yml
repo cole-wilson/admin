@@ -13,6 +13,9 @@ show_preview_links: false
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
+    label_singular: 'Post'
+    description: >
+      Blog posts and tutorials go here
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -26,6 +29,11 @@ collections:
 
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
+    label_singular: 'Page'
+    description: >
+      Individual pages go here.
+    editor:
+      preview: false
     folder: "_pages/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -41,6 +49,11 @@ collections:
       
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
+    label_singular: 'Project'
+    description: >
+      Projects go here.
+    editor:
+      preview: false
     folder: "_projects/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -56,3 +69,18 @@ collections:
       - {label: "Download URL", required: false, name: "download", widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
       - {label: "Body", name: "body", widget: "markdown"}
     
+
+
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'Jekyll Config File'
+        label: 'Jekyll Config File'
+        file: '_config.yml'
+        description: 'Jekyll Config File'
+        fields:
+          - { label: 'Edit', name: 'body', widget: 'code' }
+      
