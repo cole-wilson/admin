@@ -63,7 +63,8 @@ collections:
       - {label: "Tags", required: false, name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "URL", name: "site", required: false, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
+      - {label: "Related Post", name: "post", widget: "relation", collection: "posts", searchFields: ["desc", "title"], valueField: "url", displayFields: ["title"]}
+      - {label: "URL to Website", name: "site", required: false, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
       - {label: "Repo", name: "repo", required: false, widget: "string"}
       - {label: "GitHub User", required: false, name: "user", widget: "string", default: "cole-wilson"}
       - {label: "Download URL", required: false, name: "download", widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
@@ -71,16 +72,16 @@ collections:
     
 
 
-  - name: 'settings'
-    label: 'Settings'
-    delete: false # Prevent users from deleting documents in this collection
-    editor:
-      preview: false
-    files:
-      - name: 'Jekyll Config File'
-        label: 'Jekyll Config File'
-        file: '_config.yml'
-        description: 'Jekyll Config File'
-        fields:
-          - { label: 'Edit', name: 'body', widget: 'code' }
+#   - name: 'settings'
+#     label: 'Settings'
+#     delete: false # Prevent users from deleting documents in this collection
+#     editor:
+#       preview: false
+#     files:
+#       - name: 'Jekyll Config File'
+#         label: 'Jekyll Config File'
+#         file: '_config.yml'
+#         description: 'Jekyll Config File'
+#         fields:
+#           - { label: 'Edit', name: 'body', widget: 'code' }
       
