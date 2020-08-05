@@ -8,7 +8,7 @@ display_url: https://colewilson.xyz
 logo_url: https://colewilson.xyz/apple-touch-icon.png
 
 publish_mode: editorial_workflow
-show_preview_links: false
+show_preview_links: true
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -63,7 +63,7 @@ collections:
       - {label: "Tags", required: false, name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Related Post", name: "post", widget: "relation", collection: "posts", searchFields: ["desc", "title"], valueField: "url", displayFields: ["title"]}
+      - {label: "Related Post", name: "post", widget: "relation", collection: "posts", searchFields: ["desc", "title"], valueField: "title", displayFields: ["title"]}
       - {label: "URL to Website", name: "site", required: false, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
       - {label: "Repo", name: "repo", required: false, widget: "string"}
       - {label: "GitHub User", required: false, name: "user", widget: "string", default: "cole-wilson"}
