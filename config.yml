@@ -90,6 +90,9 @@ collections:
         widget: "select"
         multiple: true
         options:
+          - { value:"A1", label:"🕶️ Anonymous Proxy" }
+          - { value:"A2", label:"🛰️ Satellite Provider" }
+          - { value:"01", label:"❓ Other Country" }
           - { value:"AD", label:"🇦🇩 Andorra" }
           - { value:"AE", label:"🇦🇪 United Arab Emirates" }
           - { value:"AF", label:"🇦🇫 Afghanistan" }
