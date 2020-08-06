@@ -11,11 +11,11 @@
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
     setInterval(function() {
-      try {
-        var myImageElement = document.getElementById('badge');
-      }
-      catch(err) {
+      if (typeof document.getElementById('badge') === undefined) {
         $("ul.css-12zz42a-AppHeaderNavList").append('<li><img id="badge" class="css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1" src="https://api.netlify.com/api/v1/badges/b452dc30-a1d4-45c0-8d9f-f6862378c0de/deploy-status"></li>');
+      }
+      else {
+        var myImageElement = document.getElementById('badge');
       }
       myImageElement.src = myImageElement.src + '?i=' + Math.random();
     }, 5000);
