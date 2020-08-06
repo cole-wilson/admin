@@ -9,6 +9,7 @@ logo_url: https://colewilson.xyz/apple-touch-icon.png
 
 publish_mode: editorial_workflow
 show_preview_links: true
+preview_path: {{slug}}
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
