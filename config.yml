@@ -70,7 +70,20 @@ collections:
       - {label: "GitHub User", required: false, name: "user", widget: "string", default: "cole-wilson"}
       - {label: "Download URL", required: false, name: "download", widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
       - {label: "Body", name: "body", widget: "markdown"}
-    
+  
+  - name: "urls" # Used in routes, e.g., /admin/collections/blog
+    label: "Shortened URLs" # Used in the UI
+    label_singular: 'URL'
+    description: >
+      Create shortened URLS!
+    editor:
+      preview: false
+    folder: "_links/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Key", name: "key", required: true, widget: "string"}
+      - {label: "Links to:", name: "u", required: true, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
 
 
 #   - name: 'settings'
