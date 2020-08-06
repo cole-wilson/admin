@@ -14,7 +14,7 @@
       try {
         var myImageElement = document.getElementById('badge');
       }
-      catch {
+      catch(err) {
         $("ul.css-12zz42a-AppHeaderNavList").append('<li><img id="badge" class="css-104dqk8-AppHeaderButton-button-buttonActive-buttonActive-buttonActive-buttonActive-AppHeaderButton e16dayda1" src="https://api.netlify.com/api/v1/badges/b452dc30-a1d4-45c0-8d9f-f6862378c0de/deploy-status"></li>');
       }
       myImageElement.src = myImageElement.src + '?i=' + Math.random();
