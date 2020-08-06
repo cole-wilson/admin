@@ -88,6 +88,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Key", name: "key", required: true, widget: "string"}
       - {label: "Links to:", name: "u", required: true, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
+      - { label: "Domain", name: "domain", widget: "select", options: ["u.colewilson.xyz", "url.colewilson.xyz", "u.risforrecess.com"] }
       - label: "Countries"
         name: "countries"
         widget: "select"
