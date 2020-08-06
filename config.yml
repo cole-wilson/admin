@@ -341,7 +341,7 @@ collections:
           - { value:"YT", label:"🇾🇹 Mayotte" }
           - { value:"ZA", label:"🇿🇦 South Africa" }
           - { value:"ZM", label:"🇿🇲 Zambia" }
-          - { value:"ZW", label:"🇿🇼 Zimbabwe
+          - { value:"ZW", label:"🇿🇼 Zimbabwe" }
 #   - name: 'settings'
 #     label: 'Settings'
 #     delete: false # Prevent users from deleting documents in this collection
