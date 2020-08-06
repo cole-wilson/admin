@@ -347,16 +347,16 @@ collections:
           - { label: "🇿🇦 South Africa", value: "ZA" }
           - { label: "🇿🇲 Zambia", value: "ZM" }
           - { label: "🇿🇼 Zimbabwe", value: "ZW" }
-   - name: 'settings'
-     label: 'Settings'
-     delete: false # Prevent users from deleting documents in this collection
-     editor:
-       preview: false
-     files:
-       - name: 'Jekyll Config File'
-         label: 'Jekyll Config File'
-         file: '_config.yml'
-         description: 'Jekyll Config File'
-         fields:
-           - { label: 'Edit', name: 'body', widget: 'code' }
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'Jekyll Config File'
+        label: 'Jekyll Config File'
+        file: '_config.yml'
+        description: 'Jekyll Config File'
+        fields:
+          - { label: 'Edit', name: 'body', widget: 'code' }
       
