@@ -1,3 +1,6 @@
+---
+title: n
+---
 backend:
   name: github
   repo: cole-wilson/cole-wilson.github.io # Path to your GitHub repository
