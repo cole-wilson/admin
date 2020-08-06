@@ -44,7 +44,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Permalink", name: "permalink", widget: "string", default: ""}
-      - {label: "Layout", name: "layout", widget: "select", options: ["post", "page", "home", "project", "master", "archive"], default: ["page"]}
+      - {label: "Layout", name: "layout", widget: "select", options: ["post", "page", "home", "project", "master", "archive", "none"], default: ["page"]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", required: false, name: "tags", widget: "list"}
       - {label: "Description", name: "desc", widget: "string"}
