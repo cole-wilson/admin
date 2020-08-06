@@ -93,7 +93,7 @@ collections:
         name: "countries"
         widget: "select"
         multiple: true
-        required: true
+        required: false
         options:
           - { label: "🕶️ Anonymous Proxy", value: "A1" }
           - { label: "🛰️ Satellite Provider", value: "A2" }
