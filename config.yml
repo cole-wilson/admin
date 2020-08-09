@@ -87,6 +87,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Key", name: "key",required: true, widget: "string"}
+      - { label: "Password", name: "password",required: false, widget: "string"}
       - { label: "Links to:", name: "u", required: true, widget: "string", pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a URL"]}
       - { label: "Domain",required: true, default: ["u.colewilson.xyz"], name: "domain", widget: "select", options: ["u.colewilson.xyz", "url.colewilson.xyz", "u.risforrecess.com"] }
       - label: "Countries"
