@@ -44,13 +44,12 @@ collections:
       - label: "Code"
         name: "content"
         widget: "code"
-        default: >
-          Reveal.initialize({
-				    hash: true,
+        default: ""
+      - label: "Config Options"
+        name: "config"
+        widget: "code"
+        default: ""
 
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			    });
-      
          
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
