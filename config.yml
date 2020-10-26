@@ -41,7 +41,15 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "permalink", widget: "string", default: "/slides/"}
-      - {label: "Code", name: "content", widget: "code", default: ""}
+      - label: "Code"
+        name: "content"
+        widget: "code"
+        default: >
+          Reveal.initialize({
+				    hash: true,
+
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			    });
       
          
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
