@@ -41,20 +41,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "permalink", widget: "string", default: "/slides/"}
+      - {label: "Code", name: "content", widget: "code", default: ""}
       
-      - label: "Slides"
-        name: "mainslides"
-        collapsed: true
-        widget: "list"
-        fields:
-          - label: "Slides"
-            name: "slides"
-            collapsed: true
-            widget: "list"
-            fields:
-              - {label: Background, name: bg, widget: string, default: "black"}
-              - {label: Title, name: title, widget: string}
-              - {label: Content, name: content, widget: markdown}
          
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
