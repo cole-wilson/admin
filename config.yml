@@ -30,7 +30,23 @@ collections:
       - {label: "Description", name: "desc", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-
+  - name: "slides" # Used in routes, e.g., /admin/collections/blog
+    label: "Slides" # Used in the UI
+    label_singular: 'Slideshow'
+    description: >
+      reveal.js slideshows
+    folder: "_slideshows/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "Slides"
+        name: "testimonials"
+        collapsed: true
+        widget: "list"
+        fields:
+         - {label: Title, name: title, widget: string}
+         - {label: Content, name: content, widget: markdown}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
     label_singular: 'Page'
