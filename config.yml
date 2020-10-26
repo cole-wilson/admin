@@ -43,7 +43,7 @@ collections:
       - {label: "Link", name: "permalink", widget: "string", default: "/slides/"}
       
       - label: "Slides"
-        name: "testimonials"
+        name: "slides"
         collapsed: true
         widget: "list"
         fields:
