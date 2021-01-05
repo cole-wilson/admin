@@ -3,7 +3,7 @@ title: n
 ---
 backend:
   name: github
-  repo: cole-wilson/cole-wilson.github.io # Path to your GitHub repository
+  repo: cole-wilson/colewilson.xyz # Path to your GitHub repository
 
 media_folder: "img"
 
